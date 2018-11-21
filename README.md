@@ -1,6 +1,6 @@
 # cordova-plugin-twitter-composer
 
-## Screen  Shot
+## Screen Shot
 
 ![2018-11-22 00 49 56](https://user-images.githubusercontent.com/13277036/48852461-bf2afe80-edf0-11e8-9bed-ed28e91ee0d7.png)
 
@@ -22,7 +22,7 @@ add below code on config.xml
 ```
 
 
-## HOW TO USE ?
+## Example 
 
 ```
 let text = 'hello world';
