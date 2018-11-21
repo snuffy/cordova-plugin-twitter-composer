@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-twitter-composer" version="0.0.1">
+	<engines>
+		<engine name="cordova-android" version=">=7.1.0" />
+	</engines>
+  <js-module src="www/twitter-composer.js" name='TWComposer' >
+    <clobbers target="TWComposer" />
+  </js-module>
+  <preference name="TWITTER_KEY" default="defaultValue" />
+  <preference name="TWITTER_SECRET" default="defaultValue" />
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="TWComposer">
+        <param name="onload" value="true" />
+        <param name="ios-package" value="TWComposer" />
+      </feature>
+    </config-file>
+    <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
+      <array>
+        <string>twitter</string>
+        <string>twitterauth</string>
+      </array>
+    </config-file>
+    <source-file src="src/ios/TWComposer.swift" />
+    <source-file src="src/ios/TWComposer-Bridging-Header.h" />
+    
+    <framework src="TwitterKit" type="podspec" spec="3.4.2"/>
+    <dependency id="cordova-plugin-add-swift-support" version="1.7.2"/>
+  </platform>
+  <platform name="android">
+  </platform>
+</plugin>

@@ -1,0 +1,26 @@
+{
+  "name": "cordova-plugin-twitter-composer",
+  "version": "0.0.1",
+  "description": "cordova-plugin-twitter-composer",
+  "cordova" : {
+    "id": "cordova-plugin-twitter-composer",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snuffy/cordova-plugin-twitter-composer"
+  },
+  "author": "snuffy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/snuffy/cordova-plugin-twitter-composer/issue"
+  },
+  "homepage": "https://github.com/snuffy/cordova-plugin-twitter-composer#readme"
+}
