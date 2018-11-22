@@ -11,6 +11,15 @@ var TWComposer = {
       } , 'TWComposer', 'compose', [text, url]);
     });
   },
+  logout: function() {
+    return new Promise((resolve, reject) => {
+      exec(response => {
+        resolve(response);
+      }, error => {
+        reject(error);
+      } , 'TWComposer', 'logout');
+    });
+  }
 };
 
 module.exports = TWComposer;

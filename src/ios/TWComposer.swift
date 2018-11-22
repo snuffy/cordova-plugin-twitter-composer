@@ -79,6 +79,17 @@ import AlamofireImage
         }
     }
     
+    func logout(_ command: CDVInvokedUrlCommand) {
+        let store = TWTRTwitter.sharedInstance().sessionStore
+
+        if let userID = store.session()?.userID {
+            store.logOutUserID(userID)
+        }
+
+        let result = CDVPluginResult(status: CDVCommandStatus_OK, messageAs:"logout")
+        self.commandDelegate.send(result, callbackId: command.callbackId)
+    }
+    
     func notifyFromAppDelegate(notification: Notification) {
 
         if let object = notification.object {
