@@ -26,7 +26,7 @@ this plugin use cocoapod. please install cocoapods
 
 ```
 $ gem install cocoapods
-$ pod install
+$ pod setup
 ```
 
 
