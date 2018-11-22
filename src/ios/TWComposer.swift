@@ -6,6 +6,7 @@ import AlamofireImage
     var callbackId:String?
     
     override func pluginInitialize() {
+
         // setting up twitter instance;
         let consumerKey = self.commandDelegate.settings["twitterconsumerkey"] as? String
         let consumerSecret = self.commandDelegate.settings["twitterconsumersecret"] as? String
@@ -80,8 +81,14 @@ import AlamofireImage
     
     func notifyFromAppDelegate(notification: Notification) {
 
-        if let object = notification.object{
+        if let object = notification.object {
             let url = ((object as! [String: Any])["url"])!
+            let isFromTwitter = (url as! NSURL).absoluteString!.contains("twitterkit")
+            
+            if !isFromTwitter {
+                return
+            }
+            
             let sourceApplication = ((object as! [String: Any])["sourceApplication"])!
             let annotation = ((object as! [String: Any])["annotation"])
             var options:[String:Any] = [:]
@@ -94,7 +101,6 @@ import AlamofireImage
             else {
                 options["UIApplicationOpenURLOptionsOpenInPlaceKey"] = 0
             }
-            
             
             TWTRTwitter().application(UIApplication.shared, open: url as! URL, options: options)
             
