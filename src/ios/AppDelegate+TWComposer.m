@@ -12,7 +12,14 @@
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *, id> *)options
 {
-    return [[Twitter sharedInstance] application:app openURL:url options:options];
+    NSRange twitter = [url.absoluteString rangeOfString:@"twitterkit"];
+    if (twitter.location != NSNotFound) {
+        return [[Twitter sharedInstance] application:app openURL:url options:options];
+    }
+    else{
+        // call super
+        return [self application:app openURL:url options:options];
+    }
 }
 
 @end
