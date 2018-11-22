@@ -8,7 +8,6 @@
 
 ```
 $ cordova plugin add cordova-plugin-twitter-composer
-
 ```
 
 or 
@@ -21,16 +20,30 @@ add below code on config.xml
 </plugin>
 ```
 
+## Cocoapod
+
+this plugin use cocoapod. please install cocoapods
+
+```
+$ gem install cocoapods
+$ pod install
+```
+
 
 ## Example 
 
 ```
-let text = 'hello world';
+let text = 'This is a cat';
 let imageURL = 'http://img.yaplog.jp/img/15/pc/k/u/r/kuro-memo/1/1357.jpg';
 
+
 TWComposer.compse(text, imageURL).then(res => {
-  // TODO;
+  // success or canceling tweet
+  res.status // ['success', 'cancel']
+
+  // you can setting the action after tweeting
 }).catch(error => {
-  // TODO;
+  // faild
+  res.status // ['failed']
 });
 ```
