@@ -22,7 +22,7 @@ add below code on config.xml
 
 ## Cocoapod
 
-this plugin use cocoapod. please install cocoapods
+This plugin use cocoapods. please install cocoapods
 
 ```
 $ gem install cocoapods
@@ -36,7 +36,7 @@ $ pod setup
 let text = 'This is a cat';
 let imageURL = 'http://img.yaplog.jp/img/15/pc/k/u/r/kuro-memo/1/1357.jpg';
 
-
+// login and compose
 TWComposer.compse(text, imageURL).then(res => {
   // success or canceling tweet
   res.status // ['success', 'cancel']
@@ -45,5 +45,10 @@ TWComposer.compse(text, imageURL).then(res => {
 }).catch(error => {
   // faild
   res.status // ['failed']
+});
+
+// logout method
+TWComposer.logout().then(() => {
+  // after logout
 });
 ```
