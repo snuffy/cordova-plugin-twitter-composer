@@ -37,7 +37,7 @@
     <source-file src="src/ios/TWComposer.swift" />
     <source-file src="src/ios/TWComposer-Bridging-Header.h" />
     <pods-config use-frameworks="true" />
-    <pod id="TwitterKit" />
+    <pod id="TwitterKit" version="3.4.0"/>
     <pod id="AlamofireImage" />
   </platform>
 </plugin>
