@@ -10,6 +10,10 @@ import AlamofireImage
         let consumerKey = self.commandDelegate.settings["twitterconsumerkey"] as? String
         let consumerSecret = self.commandDelegate.settings["twitterconsumersecret"] as? String
         TWTRTwitter.sharedInstance().start(withConsumerKey: consumerKey!, consumerSecret: consumerSecret! );
+        
+        // notification from appDelegate application
+        NotificationCenter.default.addObserver(self, selector: #selector(type(of: self).notifyFromAppDelegate(notification:)), name: Notification.Name.CDVPluginHandleOpenURLWithAppSourceAndAnnotation, object: nil)
+        
     }
 
     func compose(_ command: CDVInvokedUrlCommand) {
@@ -71,6 +75,29 @@ import AlamofireImage
                 let result = CDVPluginResult(status: CDVCommandStatus_OK, messageAs: returnMessage)
                 self.commandDelegate.send(result, callbackId: command.callbackId)
             }
+        }
+    }
+    
+    func notifyFromAppDelegate(notification: Notification) {
+
+        if let object = notification.object{
+            let url = ((object as! [String: Any])["url"])!
+            let sourceApplication = ((object as! [String: Any])["sourceApplication"])!
+            let annotation = ((object as! [String: Any])["annotation"])
+            var options:[String:Any] = [:]
+            
+            options["UIApplicationOpenURLOptionsSourceApplicationKey"] = sourceApplication
+            
+            if let an = annotation {
+                options["UIApplicationOpenURLOptionsOpenInPlaceKey"] = an
+            }
+            else {
+                options["UIApplicationOpenURLOptionsOpenInPlaceKey"] = 0
+            }
+            
+            
+            TWTRTwitter().application(UIApplication.shared, open: url as! URL, options: options)
+            
         }
     }
 }
