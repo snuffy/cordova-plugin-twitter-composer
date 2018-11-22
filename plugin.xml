@@ -34,8 +34,6 @@
         </dict>
       </array>
     </config-file>
-    <source-file src="src/ios/AppDelegate+TWComposer.h" />
-    <source-file src="src/ios/AppDelegate+TWComposer.m" />
     <source-file src="src/ios/TWComposer.swift" />
     <source-file src="src/ios/TWComposer-Bridging-Header.h" />
     <pods-config use-frameworks="true" />
