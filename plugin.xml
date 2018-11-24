@@ -44,11 +44,14 @@
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="TWComposer">
-        <param name="android-package" value="com.snuffy.TWComposer"/>
+        <param name="android-package" value="jp.snuffy.TWComposer"/>
         <param name="onload" value="true" />
       </feature>
       <preference name="TwitterConsumerKey" value="$TWITTERCONSUMERKEY" />
       <preference name="TwitterConsumerSecret" value="$TWITTERCONSUMERSECRET" />
     </config-file>
+
+    <framework src="src/android/twitter.gradle" custom="true" type="gradleReference" />
+    <source-file src="src/android/TWComposer.java" target-dir="src/com/snuffy" />
   </platform>
 </plugin>
