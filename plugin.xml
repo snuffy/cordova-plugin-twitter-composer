@@ -29,7 +29,7 @@
         <dict>
           <key>CFBundleURLSchemes</key>
           <array>
-            <string>twitterkit-aWnENa2fUcF1x82yoNL8HXppG</string>
+            <string>twitterkit-$TWITTERCONSUMERKEY</string>
           </array>
         </dict>
       </array>
