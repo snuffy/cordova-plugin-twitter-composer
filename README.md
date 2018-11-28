@@ -22,7 +22,7 @@ or
 
 add below code on config.xml
 ```
-<plugin name="cordova-plugin-twitter-composer" spec="0.0.1">
+<plugin name="cordova-plugin-twitter-composer" spec="0.0.9">
     <variable name="TWITTERCONSUMERKEY" value="xxxx" />
     <variable name="TWITTERCONSUMERSECRET" value="xxxx" />
 </plugin>
