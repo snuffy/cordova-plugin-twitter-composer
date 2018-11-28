@@ -17,6 +17,7 @@
         <param name="ios-package" value="TWComposer" />
       </feature>
     </config-file>
+
     <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
       <array>
         <string>twitter</string>
@@ -51,7 +52,11 @@
       <preference name="TwitterConsumerSecret" value="$TWITTERCONSUMERSECRET" />
     </config-file>
 
+    <config-file target="AndroidManifest.xml" parent="/*">
+      <uses-permission android:name="android.permission.INTERNET" />
+    </config-file>
+
     <framework src="src/android/twitter.gradle" custom="true" type="gradleReference" />
-    <source-file src="src/android/TWComposer.java" target-dir="src/com/snuffy" />
+    <source-file src="src/android/TWComposer.java" target-dir="src/jp/snuffy" />
   </platform>
 </plugin>
