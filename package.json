@@ -19,8 +19,18 @@
   },
   "author": "snuffy",
   "license": "MIT",
+  "dependencies": {
+    "xml2js": "^0.4.16"
+  },
   "bugs": {
     "url": "https://github.com/snuffy/cordova-plugin-twitter-composer/issue"
   },
-  "homepage": "https://github.com/snuffy/cordova-plugin-twitter-composer#readme"
+  "homepage": "https://github.com/snuffy/cordova-plugin-twitter-composer#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android",
+    "cordova:plugin",
+    "plugin"
+  ]
 }
