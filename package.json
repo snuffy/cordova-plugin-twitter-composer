@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-twitter-composer",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "cordova-plugin-twitter-composer",
   "cordova" : {
     "id": "cordova-plugin-twitter-composer",
