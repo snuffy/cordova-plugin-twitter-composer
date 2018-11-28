@@ -2,7 +2,12 @@
 
 ## Screen Shot
 
+iOS
 ![2018-11-22 00 49 56](https://user-images.githubusercontent.com/13277036/48852461-bf2afe80-edf0-11e8-9bed-ed28e91ee0d7.png)
+
+Android
+![screenshot_20181128-212416](https://user-images.githubusercontent.com/13277036/49151869-7e813700-f354-11e8-8884-c6fb4dba5b2c.png)
+
 
 ## Instalation
 
